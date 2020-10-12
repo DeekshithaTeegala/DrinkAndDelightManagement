@@ -1,0 +1,15 @@
+
+drop table product_tbl;
+drop sequence product_seq;
+create table product_tbl(product_id number(6) primary key,product_name varchar2(15),price number(8,2),manufacturingdate date,expirydate date);
+create sequence product_seq start with 2001;
+insert into product_tbl values(product_seq.nextval,'AirConditioner',30000,TO_date('2019-01-01','YYYY-MM-DD'),TO_date('2020-01-01','YYYY-MM-DD'));
+insert into product_tbl values(product_seq.nextval,'Cosmetics',10000,TO_date('2020-06-20','YYYY-MM-DD'),TO_date('2020-09-20','YYYY-MM-DD'));
+select * from product_tbl;
+
+
+
+
+
+
+
